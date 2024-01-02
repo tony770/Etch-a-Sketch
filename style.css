@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40rem;
+    height: 40rem;
+    border-style: solid;
+}
+
+.gridItem {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: white;
+    box-sizing: border-box;
+    border-style: solid;
+}
+
+.button-container {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+}
+
+.reset-btn {
+    display: flex;
+    border: 1px solid;
+    padding: 8px 18px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+.button {
+    transition-duration: 0.4s;
+}
+
+.reset-btn:hover {
+    background-color: aliceblue;
+}
