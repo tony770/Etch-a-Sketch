@@ -31,7 +31,7 @@ function reset() {
   let promptSize = prompt("Gridsize");
   let gridSize = parseInt(promptSize, 10);
 
-  const gridContainer = document.getElementById('girdContainer');
+  const gridContainer = document.getElementById('gridContainer');
   while (gridContainer.firstChild) {
     gridContainer.removeChild(gridContainer.firstChild);
   }
