@@ -27,9 +27,14 @@ function reset() {
     item.style.backgroundColor = "white";
   })
   
-  //need fixing
-  let promptSize = prompt("Gridsize");
+  let promptSize = prompt("Enter grid size(Maximum size of 100): ");
   let gridSize = parseInt(promptSize, 10);
+
+  while(gridSize > 100 || gridSize <= 0)
+  {
+    newPrompt = prompt("Please enter valid size: ");
+    gridSize = parseInt(newPrompt, 10);
+  }
 
   const gridContainer = document.getElementById('gridContainer');
   while (gridContainer.firstChild) {
@@ -41,11 +46,11 @@ function reset() {
 
 
 
-function changeColor() {
+function paint() {
   this.style.backgroundColor = '#000000'
 }
 
 function onLoad() {
   let pixels = document.querySelectorAll(".gridItem");
-  pixels.forEach(pixel => pixel.addEventListener("mouseover", changeColor));
+  pixels.forEach(pixel => pixel.addEventListener("mouseover", paint));
 }
