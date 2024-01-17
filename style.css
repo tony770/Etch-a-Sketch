@@ -37,30 +37,30 @@ button {
     margin: 0 10px;
 }
 
-.reset-btn {
+#reset-btn {
     background-color: rgba(232, 120, 79, 0.826);
 }
 
-.reset-btn:hover,
-.rainbowbtn:hover,
-.eraserbtn:hover {
+#reset-btn:hover,
+#rainbowbtn:hover,
+#eraserbtn:hover {
     background-color: cornsilk;
 }
 
-.rainbowbtn {
+#rainbowbtn {
     background-color: turquoise;
 }
 
-.eraserbtn {
+#eraserbtn {
     background-color: darkkhaki;
 }
 
-.defaultbtn {
+#defaultbtn {
     background-color: black;
     color: azure;
 }
 
-.defaultbtn:hover {
+#defaultbtn:hover {
     background-color: cornsilk;
     color: black;
 }

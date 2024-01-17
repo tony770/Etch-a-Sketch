@@ -1,3 +1,5 @@
+let color = "black";
+
 function createGrid(size){
   
   size = size || 16;
@@ -43,11 +45,35 @@ function reset() {
   createGrid(gridSize);
 }
 
+const defaultbtn = document.getElementById("defaultbtn");
+const rainbowbtn = document.getElementById("rainbowbtn");
+const eraserbtn = document.getElementById("eraserbtn");
 
+defaultbtn.addEventListener("click", function() {
+  color = 'black';
+});
+
+rainbowbtn.addEventListener("click", function() {
+  color = 'rainbow';
+});
+
+eraserbtn.addEventListener("click", function() {
+  color = 'eraser';
+});
 
 
 function paint() {
-  this.style.backgroundColor = '#000000'
+  switch(color){
+    case "rainbow":
+      this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+      break;
+    case "black":
+      this.style.backgroundColor = '#000000';
+      break;
+    case "eraser":
+      this.style.backgroundColor = '#FFFFFF';
+      break;
+  }
 }
 
 function onLoad() {
